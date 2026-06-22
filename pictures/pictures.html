@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>casas da beira</title>
+    <style>
+        html, body { margin: 0; padding: 0; }
+        body {
+            background-image: linear-gradient(to right, #850000, #c0c0c0);
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+        .container { max-width: 1200px; margin: 20px auto; padding: 0 16px; }
+        h1 { margin: 0 0 6px; }
+        h3 { margin: 0 0 12px; font-weight: 400; }
+        .product { background: rgba(255,255,255,0.06); padding: 12px; border-radius: 6px; margin-bottom: 12px; }
+
+        .image-wrapper { max-width: 1000px; margin: 0 auto; padding: 8px; }
+        .image-wrapper img { width: 100%; height: auto; display: block; border-radius: 6px; object-fit: cover; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>casas da beira</h1>
+        <h3>roupas na moda</h3>
+        <hr>
+
+        <div class="product">
+            <h4>Produto 1</h4>
+            <p>R$ 99,99</p>
+            <button>buy</button>
+        </div>
+
+        <div class="image-wrapper">
+            <img
+                src="foto-pexel-casas1380.jpg"
+                srcset="foto-pexel-casas700.jpg 700w, foto-pexel-casas1380.jpg 1380w"
+                sizes="100vw"
+                alt="casas da beira"
+                loading="lazy" decoding="async"
+            >
+        </div>
+    </div>
+</body>
+</html>

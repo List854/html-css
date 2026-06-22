@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+body {
+  background-image: linear-gradient(to right, #ffffff, #ffebc7,rgb(255, 238, 209)0);
+  font-family: Arial, sans-serif;
+}
+
+/* tudo que é id em html é # em css
+ em html, tudo que é class é= . em css */
+
+
+h1#principal {
+  color: #6e0000;
+  text-align: center;
+  display: block;
+  width: fit-content;
+  margin: 50px auto 20px;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 12px;
+  border: 2px solid #e7a16a;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+  color: #571d86;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h2 {
+  color: #571d86;
+  margin-top: 30px;
+}
+p {
+  color: #418600;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}

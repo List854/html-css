@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1{
+            
+            display: flex ;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 6px;
+
+            /* fallback sólido */
+            background-color: rgb(0, 145, 194);
+            /* degradê correto */
+            background-image: linear-gradient(to right, rgb(22, 22, 22), rgb(0, 98, 196) , rgb(39, 93, 255), rgb(17, 17, 17) 100%);
+            border: 13px solid black;
+
+            padding: 12px;
+            margin: 20px auto;
+        }
+
+            /* Estilo organizado para links com contorno e foco acessível */
+        a{
+                display: inline-block;
+                padding: 6px 10px;
+                border: 2px solid #d32f2f;
+                border-radius: 6px;
+                color: inherit;
+                text-decoration: none;
+                transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+            }
+            a:hover{
+                background-color: rgba(211,47,47,0.08);
+                transform: translateY(-2px);
+            }
+            a:focus{
+                outline: none;
+                box-shadow: 0 0 0 4px rgba(255,193,7,0.25);
+                border-color: #b71c1c;
+            }
+
+    </style>        
+</head>
+<body>
+    <h1>Modelo de Caixas box-level</h1>
+    <p>paragrafos tambem são exemplos de box-level, mas os <a href="#">its here the links</a> são exemplos de inline-level
+    vamos ver como isso funciona</p>
+</body>
+</html>

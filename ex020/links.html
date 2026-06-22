@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+       /* seletores personalizados 
+       #  = id
+       .  = class
+       :  = pseudo-class
+       :: = pseudo-element
+       >  = children \
+       */
+       
+        body {
+            font-family: Arial, helvetica, sans-serif;
+        }
+
+        a {
+            color: rgb(48, 153, 0);
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        a:visited {
+            color: rgba(48, 153, 0, 0.048);
+        }
+
+        a:hover {
+            
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: rgb(0, 255, 34);
+            font-weight: bold;
+        }
+        
+        .especial {
+            color: rgb(255, 0, 0);
+            background-color: rgba(229, 255, 0, 0.568);
+            padding: 0 0.15em;
+            border-radius: 0.2em;
+            text-decoration: none;
+        }
+
+        .especial::after {
+            content: " link";
+            font-size: 0.8em;
+            color: rgba(56, 56, 56, 0.479);
+        }
+
+        .especial::before {
+            content: "==>";
+            color: rgb(49, 33, 33);
+        }
+    </style>
+</head>
+<body>
+   <h1>personalizando links</h1>
+   <hr>
+   <h2>nossas redes vizinhas</h2>
+   <ul>
+       <li><a href="https://github.com/?locale=pt-br" class="especial" target="_blank">click here github</a></li>
+       <li><a href="https://www.youtube.com" target="_blank">click here youtube</a></li>
+       <li><a href="https://www.facebook.com" target="_blank"> click here facebook</a></li>
+    </ul>  
+</body>
+</html>

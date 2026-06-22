@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grouping tags</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            font-family: Inter, Arial, Helvetica, sans-serif;
+            color: #e8e8e8;
+            background-color: #131313;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #131313;
+        }
+
+        .container {
+            width: min(1120px, 100% - 32px);
+            margin: 0 auto;
+            padding: 24px 0 40px;
+        }
+
+        header {
+            padding: 24px 0 16px;
+        }
+
+        h1 {
+            margin: 0 0 16px;
+            color: #ffffff;
+            font-size: clamp(2rem, 3vw, 3rem);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            padding: 14px 20px;
+            margin: 0;
+            background: #1f1f1f;
+            border: 1px solid #2f2f2f;
+            border-radius: 16px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            color: #ffd700;
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+            align-items: start;
+            margin-top: 32px;
+        }
+
+        .card {
+            background: #1f1f1f;
+            border: 1px solid #2d2d2d;
+            border-radius: 16px;
+            padding: 26px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .card h2 {
+            margin: 0 0 14px;
+            color: #ffffff;
+            font-size: 1.6rem;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        .card p {
+            margin: 0 0 18px;
+            color: #c9c9c9;
+            line-height: 1.8;
+        }
+
+        .card + .card {
+            margin-top: 24px;
+        }
+
+        .aside-panel {
+            display: grid;
+            gap: 20px;
+        }
+
+        .aside-panel h3 {
+            margin: 0 0 8px;
+            color: #ffffff;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            text-align: center;
+        }
+
+        .link-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 12px;
+        }
+
+        .link-list li {
+            margin: 0;
+        }
+
+        .link-list a {
+            display: block;
+            padding: 12px 16px;
+            border-radius: 14px;
+            background: #262626;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .link-list a:hover,
+        .link-list a:focus-visible {
+            background: #353535;
+            transform: translateX(2px);
+            color: #ffd700;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 24px 0 16px;
+            text-align: center;
+            color: #9e9e9e;
+            font-size: 0.95rem;
+            border-top: 1px solid #2f2f2f;
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+        .small-note {
+            font-size: 0.9rem;
+            color: #8a8a8a;
+        }
+
+        @media (max-width: 840px) {
+            .layout-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            hr {
+                margin: 10px 0;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <h1>Fim da Linha</h1>
+         <hr>
+        <nav id="principal">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="layout-grid">
+            <article class="card">
+                <h2>Bem-vindo ao meu site</h2>
+                <p>Este é um exemplo de agrupamento de tags usando &lt;div&gt; para organizar o conteúdo de forma clara e profissional.</p>
+
+                <h2>Sobre Mim</h2>
+                <p>Sou um desenvolvedor web apaixonado por criar sites modernos, visuais e fáceis de usar. Gosto de interfaces limpas e estruturas bem definidas.</p>
+
+                <h2>Contato</h2>
+                <p>Entre em contato comigo através do email: <a href="mailto:rafaelbrisola2010@gmail.com">rafaelbrisola2010@gmail.com</a></p>
+            </article>
+
+            <aside class="aside-panel">
+                <div class="card">
+                    <h3>Links</h3>
+                    <ul class="link-list">
+                        <li><a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://twitter.com/seu-usuario" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>© 2026 Jacks Peyor. Todos os direitos reservados.</p>
+        <p class="small-note">Desenvolvido por Jacks Peyor e Alechandre de Moreais.</p>
+    </footer>
+</body>

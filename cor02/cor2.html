@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradiante de css</title>
+</head>
+<body>
+    <h1 style="color: white; text-align: center;">testando gradiente de css</h1>
+    <style>
+        *{
+            height: 100vh;
+        }
+        body {
+            background-image: linear-gradient(to right, #ffffff, #00238b, #031753, #023BE6, #ffffff);
+        }
+    </style>
+    <picture>
+        <h2>usando a tag picture</h2>
+        <source media="(max-width: 600px)" type="image/png" srcset="c:\Users\T-GAMER\Desktop\estudos\css\treino]\foto-pexel-casas700.jpg c:\Users\T-GAMER\Desktop\estudos\css\treino]\foto-pexel-casas1380.jpg c:\Users\T-GAMER\Desktop\estudos\css\treino]\pexel-img-300-400.png">
+        <source media="(max-width: 1500px)" type="image/png" srcset="c:\Users\T-GAMER\Desktop\estudos\css\treino]\foto.g.png">
+        <img src="c:\Users\T-GAMER\Desktop\estudos\css\treino]\foto-1000.png" alt="imagem flexivel">
+    </picture>
+</body>
+</html>
