@@ -1,0 +1,72 @@
+<!--                                                                   TABELAS
+              
+
+             RESUMO:
+             
+               <table>, <tr> e <td>
+              <table>: elemento que cria uma tabela. Contém linhas (<tr>) e cabeçalhos (<th>) ou células (<td>).
+              <tr> (table row): representa uma linha da tabela; agrupa células horizontais.
+              <td> (table data): representa uma célula de dados dentro de uma linha (<tr>).
+              <th>: célula de cabeçalho (negrito/centralizada por padrão); use scope="col" ou "row" para acessibilidade.
+              colspan / rowspan: mesclam células horizontalmente (colspan) ou verticalmente (rowspan).
+              Estrutura recomendada: <table><thead> (cabeçalho) + <tbody> (corpo) + <tfoot> (rodapé) — melhora semântica e acessibilidade.
+              Estilos úteis: border-collapse: collapse; padding e text-align para legibilidade.
+              Acessibilidade: sempre associe cabeçalhos a células e use caption quando precisar de título da tabela.                     -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabelas</title>
+    <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    table{
+        border-collapse: collapse;
+        width: 300px;
+    }
+
+    td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <h1>Mesclagem de Células</h1>
+
+    <table>
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td>
+            
+        </tr>
+
+        <tr> 
+            <td rowspan="3">D</td>
+            <td>E</td>
+            <td rowspan="2">F</td>
+
+        </tr>
+
+        <tr>
+           
+            <td>H</td>
+            
+
+        </tr>
+
+         <tr>
+            
+            <td colspan="2">K</td>
+            
+
+        </tr>
+    </table>
+    
+</body>
+</html>
