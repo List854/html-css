@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabelas</title>
+   
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 760px;
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 0.6rem;
+            text-align: center;
+        }
+
+        caption {
+            font-size: 1.3em;
+            margin-bottom: 0.8rem;
+        }
+        thead th {
+            background: #666;
+            color: #fff;
+        }
+        tbody th {
+            text-align: left;
+            background: #e2e2e2;
+        }
+        .total{
+            background: #777;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- <caption> descreve o conteúdo da tabela e fica acima dela. -->
+        <caption>desafio capitulo 21</caption>
+        <!-- <thead> agrupa as linhas de cabeçalho da tabela. -->
+        <thead>
+            <!-- <th> é usado em células de cabeçalho/título, enquanto <td> é usado nas células de dados normais. -->
+            <tr>
+                <th scope="col">Àrea</th>
+                <th scope="col">Diciplinas</th>
+                <th scope="col" colspan="2">Notas</th>
+                <th scope="col">Média</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th scope="col">Nota 1</th>
+                <th scope="col">Nota 2</th>
+                <th></th>
+            </tr>
+        </thead>
+        <!-- <tbody> agrupa as linhas de corpo da tabela com os dados reais. -->
+        <tbody>
+            <tr>
+                <th rowspan="4" scope="rowgroup">exatas</th>
+                <td>Matemática</td>
+                <td>8.0</td>
+                <td>9.0</td>
+                <td>8.5</td>
+            </tr>
+             <tr>
+                <td>Física</td>
+                <td>7.5</td>
+                <td>8.0</td>
+                <td>7.8</td>
+            </tr>
+            <tr>
+                <td>Química</td>
+                <td>7.0</td>
+                <td>7.5</td>
+                <td>7.3</td>
+            </tr>
+            <tr>
+                <td>Biologia</td>
+                <td>8.0</td>
+                <td>8.5</td>
+                <td>8.3</td>
+            </tr>
+              <tr class="total">
+                <td colspan="4">Média de Exatas</td>
+                <td>8.0</td>
+            </tr>
+            <tr>
+                <th rowspan="2" scope="rowgroup">Humanas</th>
+                <td>História</td>
+                <td>7.5</td>
+                <td>8.0</td>
+                <td>7.8</td>
+            </tr>
+
+            <tr>
+                <td>Geografia</td>
+                <td>8.0</td>
+                <td>8.0</td>
+                <td>8.0</td>
+            </tr>
+
+            <tr class="total">
+                <td colspan="4">Média de Humanas</td>
+                <td>7.9</td>
+            </tr>
+        </tbody>
+    </table>
+  
+</body>
+</html>

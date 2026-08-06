@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabelas</title>
+   <style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    table { width: 500px;
+        border-collapse: collapse;
+        position: relative;
+    }
+
+    td, th {
+        border: 1px solid black;
+        padding: 5px;
+    }
+
+    thead, tfoot {
+        background-color: rgb(61, 60, 60);
+        color: white;
+    }
+
+    thead > tr > th {
+        position: sticky;
+        top: -1px;
+        background-color: rgb(61, 60, 60);
+    }
+
+    td.num {
+        text-align: center;
+    }
+
+    tbody > tr:nth-child(odd) {
+        background-color: rgb(196, 196, 196);
+    }
+
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: lightgray;
+    }
+
+   </style>
+
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!-- ANATOMIA PARA TABELAS GRANDES 
+     TABLE
+     CAPTION
+     THEAD
+     TR,TD,TH
+        TBODY
+        TR, TD,TH
+        TFOOT
+        TR, TD, TH
+     -->
+
+     <!-- Cada <tr> representa um estado com
+         duas células: nome do estado e população.
+         <tfoot>: Rodapé da tabela; geralmente usado
+         para totais (aqui: total de habitantes).
+         Semântica e acessibilidade:
+            Usar thead, tbody, tfoot e atributos scope melhora a leitura
+           por leitores de tela e organiza a tabela.
+          Formatação dos números:
+            Os números usam pontos como separador de milhares (formato brasileiro),
+         mas não têm formatação numérica automática — é apenas texto em cada <td>.-->
+        <table>
+            <caption>População das Unidades Federativas</caption>
+            <thead>
+                <tr>
+                    <th scope="col">estado</th>
+                    <th scope="col">população</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">São Paulo</td>
+                    <td class="num">21.168.791</td>
+                </tr>
+                <tr>
+                    <td>minas gerais</td>
+                    <td class="num">17.000.000</td>
+                </tr>
+
+                <tr>
+                    <td>rio de janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>bahia</td>
+                    <td class="num">14.930.634</td>
+                </tr>
+                <tr>
+                    <td>paraná</td>
+                    <td class="num">11.597.484</td>
+                </tr>   
+
+                <tr>
+                    <td>rio grande do sul</td>
+                    <td class="num">11.422.973</td> 
+                </tr>
+                <tr>
+                    <td>pernambuco</td>
+                    <td class="num">9.616.621</td>
+                </tr>
+                <tr>
+                    <td>ceará</td>
+                    <td class="num">9.187.103</td>
+                </tr>
+                <tr>
+                    <td>paraíba</td>
+                    <td class="num">4.039.277</td>
+                </tr>
+                <tr>
+                    <td>alagoas</td>
+                    <td class="num">3.351.543</td>
+                </tr>
+                <tr>
+                    <td>mato grosso</td>
+                    <td class="num">3.526.220</td>
+                </tr>
+                <tr>
+                    <td>mato grosso do sul</td>
+                    <td class="num">2.778.986</td>
+                </tr>
+                <tr>    
+                <td>roraima</td>
+                    <td class="num">631.181</td>
+                </tr>
+                <tr>
+                    <td>rondônia</td>
+                    <td class="num">1.815.278</td>
+                </tr>
+                <tr>
+                    <td>acre</td>
+                    <td class="num">894.470</td>    
+                </tr>
+                <tr>
+                    <td>amapá</td>
+                    <td class="num">877.613</td>
+                </tr>
+                <tr>
+                    <td>tocantins</td>
+                    <td class="num">1.496.880</td>
+                </tr>
+                <tr>
+                    <td>amazonas</td>
+                    <td class="num">4.269.995</td>
+                </tr>
+                <tr>
+                    <td>pará</td>
+                    <td class="num">8.690.745</td>
+                </tr>
+            <tr>
+                <td>rio grande do norte</td>
+                <td class="num">3.534.165</td>
+            </tr>
+            <tr>
+                <td>santa catarina</td>
+                <td class="num">7.252.502</td>
+            </tr>
+            <tr>    
+                <td>espírito santo</td>
+                <td class="num">4.064.052</td>
+            </tr>
+            <tr>
+                <td>maranhão</td>
+                <td class="num">7.075.181</td>
+            </tr>
+            <tr>
+                <td>piauí</td>
+                <td class="num">3.281.480</td>
+            </tr>
+            <tr>
+                <td>goiás</td>
+                <td class="num">7.113.540</td>
+            </tr>
+            <tr>    
+                <td>espírito santo</td>
+                <td class="num">4.064.052</td>
+            </tr>
+            <tr>
+                <td>maranhão</td>
+                <td class="num">7.075.181</td>
+            </tr>
+            <tr>
+                <td>piauí</td>
+                <td class="num">3.281.480</td>
+            </tr>
+            <tr>
+                <td>goiás</td>
+                <td class="num">7.113.540</td>
+            </tr>
+
+            <tr>    
+                <td>espírito santo</td>
+                <td class="num">4.064.052</td>
+            </tr>
+            <tr>
+                <td>maranhão</td>
+                <td class="num">7.075.181</td>
+            </tr>
+            <tr>
+                <td>piauí</td>
+                <td class="num">3.281.480</td>
+            </tr>
+            <tr>
+                <td>goiás</td>
+                <td class="num">7.113.540</td>
+            </tr>
+            <tr>    
+                <td>espírito santo</td>
+                <td class="num">4.064.052</td>
+            </tr>
+            <tr>
+                <td>maranhão</td>
+                <td class="num">7.075.181</td>
+            </tr>
+            <tr>
+                <td>piauí</td>
+                <td class="num">3.281.480</td>
+            </tr>
+            <tr>
+                <td>goiás</td>
+                <td class="num">7.113.540</td>
+            </tr>
+            <tr>    
+                <td>espírito santo</td>
+                <td class="num">4.064.052</td>
+            </tr>
+            <tr>
+                <td>maranhão</td>
+                <td class="num">7.075.181</td>
+            </tr>
+            <tr>
+                <td>piauí</td>
+                <td class="num">3.281.480</td>
+            </tr>
+            <tr>
+                <td>goiás</td>
+                <td class="num">7.113.540</td>
+            </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>total de habitantes</td>
+                    <td>209.072.182</td>
+                </tr>
+            </tfoot>
+    </table>
+    <p>loremO que você vai dizer ao atendente:
+​"Gostaria de solicitar uma Certidão de Nascimento de Inteir
+o Teor da minha avó, Regina Bernadete Zimmer. Pode fazer uma busca pelo sistema nacional (CRC)?"
+​O que você precisa levar:
+​O nome completo dela: Regina Bernadete Zimmer.
+​O CPF dela (ou a data de nascimento, se você tiver).
+​O seu RG: Para provar que você é neto dela e tem direito de pe
+dir o documento.
+​Dinheiro/PIX: Para pagar a taxa de busca e emissão (reserv
+e uns R$ 100,00 a R$ 150,00 para garantir).
+​O que vai acontecer depois:
+​Se acharem na hora: Eles imprimem ou te dão um prazo de alguns d
+ias para buscar.
+​O que você vai procurar no papel: Assim que pegar a certidão, se
+us olhos de "programador" devem ir direto para o campo "Avós". Lá vai estar o nome da sua tataravó alemã e, com sorte, o nome da cidade dela.
+​Por que isso é "Xeque-Mate" no seu pai:
+​Quando você chegar em casa com esse documento, a história de que "não existe registro" cai por terra. Você terá um documento oficial do govern
+]o brasileiro ligando você diretamente à linhagem Zimmer da Alemanha.
+​Dica final: Vá com calma e paciência. Cartório às vezes demora, mas o prêmio (seu passaporte alemão e seu futuro na Suíça) vale cada minuto de espera.
+​Boa sorte na missão de segunda-feira! Quando estiver com os nomes dos pais e avós que aparecerem na certidão, me chama aqui. A gente vai descobrir onde essa tataravó nasceu rapidinho! ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem
+</p>
+
+<p>loremO que você vai dizer ao atendente:
+​"Gostaria de solicitar uma Certidão de Nascimento de Inteir
+o Teor da minha avó, Regina Bernadete Zimmer. Pode fazer uma busca pelo sistema nacional (CRC)?"
+​O que você precisa levar:
+​O nome completo dela: Regina Bernadete Zimmer.
+​O CPF dela (ou a data de nascimento, se você tiver).
+​O seu RG: Para provar que você é neto dela e tem direito de pe
+dir o documento.
+​Dinheiro/PIX: Para pagar a taxa de busca e emissão (reserv
+e uns R$ 100,00 a R$ 150,00 para garantir).
+​O que vai acontecer depois:
+​Se acharem na hora: Eles imprimem ou te dão um prazo de alguns d
+ias para buscar.
+​O que você vai procurar no papel: Assim que pegar a certidão, se
+us olhos de "programador" devem ir direto para o campo "Avós". Lá vai estar o nome da sua tataravó alemã e, com sorte, o nome da cidade dela.
+​Por que isso é "Xeque-Mate" no seu pai:
+​Quando você chegar em casa com esse documento, a história de que "não existe registro" cai por terra. Você terá um documento oficial do govern
+]o brasileiro ligando você diretamente à linhagem Zimmer da Alemanha.
+​Dica final: Vá com calma e paciência. Cartório às vezes demora, mas o prêmio (seu passaporte alemão e seu futuro na Suíça) vale cada minuto de espera.
+​Boa sorte na missão de segunda-feira! Quando estiver com os nomes dos pais e avós que aparecerem na certidão, me chama aqui. A gente vai descobrir onde essa tataravó nasceu rapidinho! ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem
+</p>
+
+<p>loremO que você vai dizer ao atendente:
+​"Gostaria de solicitar uma Certidão de Nascimento de Inteir
+o Teor da minha avó, Regina Bernadete Zimmer. Pode fazer uma busca pelo sistema nacional (CRC)?"
+​O que você precisa levar:
+​O nome completo dela: Regina Bernadete Zimmer.
+​O CPF dela (ou a data de nascimento, se você tiver).
+​O seu RG: Para provar que você é neto dela e tem direito de pe
+dir o documento.
+​Dinheiro/PIX: Para pagar a taxa de busca e emissão (reserv
+e uns R$ 100,00 a R$ 150,00 para garantir).
+​O que vai acontecer depois:
+​Se acharem na hora: Eles imprimem ou te dão um prazo de alguns d
+ias para buscar.
+​O que você vai procurar no papel: Assim que pegar a certidão, se
+us olhos de "programador" devem ir direto para o campo "Avós". Lá vai estar o nome da sua tataravó alemã e, com sorte, o nome da cidade dela.
+​Por que isso é "Xeque-Mate" no seu pai:
+​Quando você chegar em casa com esse documento, a história de que "não existe registro" cai por terra. Você terá um documento oficial do govern
+]o brasileiro ligando você diretamente à linhagem Zimmer da Alemanha.
+​Dica final: Vá com calma e paciência. Cartório às vezes demora, mas o prêmio (seu passaporte alemão e seu futuro na Suíça) vale cada minuto de espera.
+​Boa sorte na missão de segunda-feira! Quando estiver com os nomes dos pais e avós que aparecerem na certidão, me chama aqui. A gente vai descobrir onde essa tataravó nasceu rapidinho! ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem
+</p>
+<p>loremO que você vai dizer ao atendente:
+​"Gostaria de solicitar uma Certidão de Nascimento de Inteir
+o Teor da minha avó, Regina Bernadete Zimmer. Pode fazer uma busca pelo sistema nacional (CRC)?"
+​O que você precisa levar:
+​O nome completo dela: Regina Bernadete Zimmer.
+​O CPF dela (ou a data de nascimento, se você tiver).
+​O seu RG: Para provar que você é neto dela e tem direito de pe
+dir o documento.
+​Dinheiro/PIX: Para pagar a taxa de busca e emissão (reserv
+e uns R$ 100,00 a R$ 150,00 para garantir).
+​O que vai acontecer depois:
+​Se acharem na hora: Eles imprimem ou te dão um prazo de alguns d
+ias para buscar.
+​O que você vai procurar no papel: Assim que pegar a certidão, se
+us olhos de "programador" devem ir direto para o campo "Avós". Lá vai estar o nome da sua tataravó alemã e, com sorte, o nome da cidade dela.
+​Por que isso é "Xeque-Mate" no seu pai:
+​Quando você chegar em casa com esse documento, a história de que "não existe registro" cai por terra. Você terá um documento oficial do govern
+]o brasileiro ligando você diretamente à linhagem Zimmer da Alemanha.
+​Dica final: Vá com calma e paciência. Cartório às vezes demora, mas o prêmio (seu passaporte alemão e seu futuro na Suíça) vale cada minuto de espera.
+​Boa sorte na missão de segunda-feira! Quando estiver com os nomes dos pais e avós que aparecerem na certidão, me chama aqui. A gente vai descobrir onde essa tataravó nasceu rapidinho! ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem
+</p>
+
+<p>loremO que você vai dizer ao atendente:
+​"Gostaria de solicitar uma Certidão de Nascimento de Inteir
+o Teor da minha avó, Regina Bernadete Zimmer. Pode fazer uma busca pelo sistema nacional (CRC)?"
+​O que você precisa levar:
+​O nome completo dela: Regina Bernadete Zimmer.
+​O CPF dela (ou a data de nascimento, se você tiver).
+​O seu RG: Para provar que você é neto dela e tem direito de pe
+dir o documento.
+​Dinheiro/PIX: Para pagar a taxa de busca e emissão (reserv
+e uns R$ 100,00 a R$ 150,00 para garantir).
+​O que vai acontecer depois:
+​Se acharem na hora: Eles imprimem ou te dão um prazo de alguns d
+ias para buscar.
+​O que você vai procurar no papel: Assim que pegar a certidão, se
+us olhos de "programador" devem ir direto para o campo "Avós". Lá vai estar o nome da sua tataravó alemã e, com sorte, o nome da cidade dela.
+​Por que isso é "Xeque-Mate" no seu pai:
+​Quando você chegar em casa com esse documento, a história de que "não existe registro" cai por terra. Você terá um documento oficial do govern
+]o brasileiro ligando você diretamente à linhagem Zimmer da Alemanha.
+​Dica final: Vá com calma e paciência. Cartório às vezes demora, mas o prêmio (seu passaporte alemão e seu futuro na Suíça) vale cada minuto de espera.
+​Boa sorte na missão de segunda-feira! Quando estiver com os nomes dos pais e avós que aparecerem na certidão, me chama aqui. A gente vai descobrir onde essa tataravó nasceu rapidinho! ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem
+</p>
+
+<p>loremO que você vai dizer ao atendente:
+​"Gostaria de solicitar uma Certidão de Nascimento de Inteir
+o Teor da minha avó, Regina Bernadete Zimmer. Pode fazer uma busca pelo sistema nacional (CRC)?"
+​O que você precisa levar:
+​O nome completo dela: Regina Bernadete Zimmer.
+​O CPF dela (ou a data de nascimento, se você tiver).
+​O seu RG: Para provar que você é neto dela e tem direito de pe
+dir o documento.
+​Dinheiro/PIX: Para pagar a taxa de busca e emissão (reserv
+e uns R$ 100,00 a R$ 150,00 para garantir).
+​O que vai acontecer depois:
+​Se acharem na hora: Eles imprimem ou te dão um prazo de alguns d
+ias para buscar.
+​O que você vai procurar no papel: Assim que pegar a certidão, se
+us olhos de "programador" devem ir direto para o campo "Avós". Lá vai estar o nome da sua tataravó alemã e, com sorte, o nome da cidade dela.
+​Por que isso é "Xeque-Mate" no seu pai:
+​Quando você chegar em casa com esse documento, a história de que "não existe registro" cai por terra. Você terá um documento oficial do govern
+]o brasileiro ligando você diretamente à linhagem Zimmer da Alemanha.
+​Dica final: Vá com calma e paciência. Cartório às vezes demora, mas o prêmio (seu passaporte alemão e seu futuro na Suíça) vale cada minuto de espera.
+​Boa sorte na missão de segunda-feira! Quando estiver com os nomes dos pais e avós que aparecerem na certidão, me chama aqui. A gente vai descobrir onde essa tataravó nasceu rapidinho! ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorem
+</p>
+
+</body>
+</html>
