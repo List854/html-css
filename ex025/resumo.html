@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resumo</title>
+    <style>
+        code {
+            font-weight: bold;
+            color:crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resumo de formulários</h1>
+
+    <h2>O que é um formulário?</h2>
+    <p>
+        Um formulário HTML coleta dados do usuário e envia essas informações
+        para um servidor. Ele pode ser usado para cadastro, login, contato,
+        pesquisa e envio de documentos.
+    </p>
+
+    <h2>Estrutura básica</h2>
+    <p>
+        A tag <code>form</code> envolve os campos. O atributo
+        <code>action</code> indica para onde os dados serão enviados, e
+        <code>method="post"</code> envia os dados no corpo da requisição,
+        sendo mais apropriado para senhas e cadastros do que o método
+        <code>get</code>. O atributo <code>autocomplete="on"</code> permite
+        que o navegador ajude a preencher os campos.
+    </p>
+
+    <h2>Rótulos e campos</h2>
+    <p>
+        Cada campo deve ter um <code>label</code>. O valor de
+        <code>for</code> deve ser igual ao <code>id</code> do campo. Isso melhora
+        a acessibilidade e permite clicar no texto para selecionar o campo.
+        O atributo <code>name</code> é o nome usado pelo servidor para receber
+        o valor enviado.
+    </p>
+
+    <h2>Exemplo revisado</h2>
+    <pre><code>&lt;form action="cadastro.php" method="post" autocomplete="on"&gt;
+    &lt;p&gt;
+        &lt;label for="iusu"&gt;Usuário:&lt;/label&gt;
+        &lt;input type="text" name="usu" id="iusu"
+            required minlength="10" maxlength="15"
+            placeholder="Digite seu usuário"
+            autocomplete="username"&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        &lt;label for="isen"&gt;Senha:&lt;/label&gt;
+        &lt;input type="password" name="sen" id="isen"
+            required minlength="8" maxlength="20"
+            placeholder="Digite sua senha"
+            autocomplete="current-password"&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        &lt;input type="submit" value="Enviar"&gt;
+        &lt;input type="reset" value="Limpar"&gt;
+    &lt;/p&gt;
+&lt;/form&gt;</code></pre>
+
+    <h2>O que os atributos fazem?</h2>
+    <ul>
+        <li><code>type="text"</code>: campo para texto comum.</li>
+        <li><code>type="password"</code>: esconde os caracteres digitados.</li>
+        <li><code>required</code>: torna o preenchimento obrigatório.</li>
+        <li><code>minlength</code> e <code>maxlength</code>: definem limites de caracteres.</li>
+        <li><code>placeholder</code>: mostra uma dica dentro do campo; não substitui o label.</li>
+        <li><code>size</code>: altera apenas a largura visual aproximada do campo.</li>
+        <li><code>submit</code>: envia o formulário.</li>
+        <li><code>reset</code>: limpa os valores preenchidos.</li>
+    </ul>
+
+    <h2>Como fazer um formulário profissional</h2>
+    <p>
+        Use labels claros, campos com o tipo correto, mensagens de erro
+        compreensíveis e validação no navegador e no servidor. Nunca confie
+        somente no HTML: o PHP precisa validar os dados novamente, proteger
+        contra ataques e armazenar senhas usando hash, nunca em texto puro.
+        Em produção, use HTTPS, proteção contra CSRF, controle de sessão e
+        limite de tentativas de login.
+    </p>
+    <p>
+        Para trabalhar futuramente na Suíça, prepare formulários acessíveis,
+        responsivos e prontos para internacionalização. Considere alemão,
+        francês, italiano e inglês; não fixe textos, formatos de data ou moeda
+        em um único idioma. Informe claramente os campos obrigatórios, peça
+        apenas os dados necessários e trate dados pessoais conforme a proteção
+        de dados aplicável, especialmente a FADP/LPD suíça e, quando houver
+        usuários da União Europeia, o GDPR.
+    </p>
+
+    <h2>Melhorias para estudar depois</h2>
+    <ul>
+        <li>Adicionar <code>fieldset</code> e <code>legend</code> para agrupar campos relacionados.</li>
+        <li>Aprender campos como <code>email</code>, <code>tel</code>, <code>date</code> e <code>select</code>.</li>
+        <li>Usar <code>autocomplete</code> adequado, como <code>email</code>, <code>tel</code> e <code>postal-code</code>.</li>
+        <li>Testar teclado, celular, leitores de tela e mensagens de erro.</li>
+        <li>Aprender PHP para validar, higienizar e processar os dados com segurança.</li>
+    </ul>
+</body>
+</html>
