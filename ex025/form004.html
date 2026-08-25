@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #020202;
+            border-radius: 5px;
+            background-image: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
+            display: flex;
+            flex-direction: column;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome" required maxlength="30"
+            placeholder="Digite seu nome completo" size="20" autocomplete="name">
+        </p>
+
+        <p>
+            <label for="imedia">Média:</label> 
+            <input type="number" name="media" id="imedia"
+            placeholder="0 a 10" step="0.1" min="0" max="10" required>
+        </p>
+
+        <p>
+            <label for="imes">Periodo Letivo</label>
+            <input type="month" name="mes" id="imes" required>
+        </p>
+
+        <p>
+            <label for="idata">Data de Nascimento:</label>
+            <input type="date" name="data" id="idata" required>
+        </p>
+
+        <p>
+            <label for="ihora">horario da prova:</label>
+            <input type="time" name="hora" id="ihora" required>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    
+
+     
+    
+</body>
+</html>
