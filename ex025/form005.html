@@ -1,0 +1,296 @@
+<!--Resumo rápido de formulários HTML
+Os formulários servem para o usuário enviar dados para o site, como nome, senha, e-mail, escolha de opções, arquivos etc.
+
+A estrutura básica é:
+
+
+O que é cada parte?
+form: cria o formulário
+action: para onde os dados vão
+method: como os dados serão enviados
+label: texto que identifica o campo
+input: campo de entrada
+name: nome do campo para o backend
+id: identifica o campo no HTML
+O que é o type no input?
+O type define o tipo de dado que o usuário vai inserir.
+
+1) text
+Serve para texto simples.
+
+
+Exemplo:
+
+nome
+cidade
+apelido
+2) password
+Esconde o texto digitado, como senha.
+
+
+Útil:
+
+senha
+confirmação de senha
+3) email
+Valida se o valor parece um e-mail.
+
+
+Funciona bem para:
+
+e-mail pessoal
+contato
+4) number
+Aceita apenas números.
+
+
+Pode usar:
+
+idade
+quantidade
+preço
+Também pode limitar valores:
+
+
+min: mínimo
+max: máximo
+step: intervalo
+5) tel
+Serve para telefone.
+
+
+É útil para:
+
+celular
+telefone fixo
+6) url
+Aceita link/URL.
+
+
+Exemplo:
+
+site pessoal
+portfolio
+7) search
+É um campo de busca.
+
+
+Pode parecer um campo normal, mas semanticamente é usado para busca.
+
+8) date
+Permite escolher data.
+
+
+Útil para:
+
+data de nascimento
+data de entrega
+9) time
+Permite escolher hora.
+
+
+10) datetime-local
+Permite data e hora local.
+
+
+11) month
+Permite escolher mês.
+
+
+12) week
+Permite escolher semana.
+
+
+13) color
+Permite escolher uma cor.
+
+
+Útil para:
+
+tema do usuário
+paleta
+14) checkbox
+Permite marcar opções.
+
+
+Exemplo:
+
+aceitar termos
+receber novidades
+Pode ter vários juntos:
+
+
+15) radio
+Permite escolher somente uma opção entre várias.
+
+
+Importante:
+
+todos os radios do mesmo grupo devem ter o mesmo name
+16) file
+Permite enviar arquivos.
+
+
+Exemplo:
+
+foto
+currículo
+documento
+Pode aceitar tipos específicos:
+
+
+17) submit
+Cria o botão para enviar o formulário.
+
+
+18) reset
+Limpa os campos do formulário.
+
+
+19) button
+Cria um botão sem comportamento automático.
+
+
+20) hidden
+Campo invisível, usado para enviar informações que o usuário não vê.
+
+
+21) range
+Cria um controle deslizante.
+
+
+Útil para:
+
+volume
+intensidade
+ajuste
+22) image
+Substitui o botão por uma imagem.
+
+
+23) datetime
+É antigo e menos usado hoje.
+
+
+Hoje o mais comum é datetime-local
+
+Atributos importantes
+required
+Faz o campo ser obrigatório.
+
+
+placeholder
+Mostra um texto dentro do campo antes do usuário digitar.
+
+
+value
+Define um valor inicial.
+
+
+readonly
+O usuário não pode editar o campo, mas ele aparece.
+
+
+disabled
+Desativa o campo.
+
+
+maxlength
+Limita a quantidade de caracteres.
+
+
+minlength
+Define número mínimo de caracteres.
+
+
+checked
+Marca uma opção por padrão no checkbox ou radio.
+
+
+selected
+Usado em option para deixar uma opção já selecionada.
+
+
+Elementos de formulário além do input
+textarea
+Serve para textos maiores.
+
+
+Útil para:
+
+mensagem
+descrição
+comentário
+select
+Cria uma lista de opções.
+
+
+option
+Define cada opção dentro do select.
+
+
+button
+Botão genérico.
+
+
+Tipos de button:
+
+submit
+reset
+button
+Exemplo completo
+
+Dica de memorização
+Em resumo:
+text = texto comum
+password = senha
+email = e-mail
+number = número
+date = data
+time = hora
+checkbox = várias opções
+radio = uma opção
+file = arquivo
+submit = enviar
+reset = limpar
+button = botão customizado-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <h1>Exemplo de formulario</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isxmas" value="M" checked>
+            <label for="isxmas">Masculino</label> <br>
+            <input type="radio" name="sexo" id="isxfem" value="F">
+             <label for="isxfem">Feminino</label> <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>esportes favoritos</legend>
+            <input type="checkbox" name="esbas" id="iesbas">
+            <label for="iesbas">basquete</label> <br>
+            <input type="checkbox" name="iesfut" id="iesfut" >
+            <label for="iesfut">Futebol</label> <br>
+            <input type="checkbox" name="esnat" id="iesnat" checked>
+            <label for="iesnat">Natação</label> <br>
+            <input type="checkbox" name="esten" id="iesten"> 
+            <label for="iesten">Tenis</label> <br>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar"
+        </p>
+
+    </form>
+</body>
+</html>
