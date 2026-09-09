@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario 7 </title>
+</head>
+<body>
+    <form action="casdastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest"> 
+
+                <optgroup label="Região Sudeste">
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de janeiro</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN"> Rio De Janeiro</option>
+                </optgroup>
+                </select>
+                </p>
+                
+                <p>
+                    <label for="iprof">Profissão: </label> <br>
+                    <input type="text" name="prof" id="iprof" list="profissoes">
+                    <datalist id="profissoes">
+                        <option value="adm">Administrador</option>
+                        <option value="cont">Contabilista</option>
+                        <option value="dev">Desenvolvedor</option>
+                        <option value="prof">Professor</option>
+                    </datalist>
+                </p>
+
+                <p>
+                    <label for="imsg">oque sabes de programação?</label> <br>
+                    <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+
+                </p>
+
+            
+        
+
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar">
+        </p>
+    </form>
+    
+</body>
+</html>

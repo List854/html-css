@@ -1,0 +1,111 @@
+<!-- diferença entre POST e GET, com exemplos reais de quando usar cada um.
+
+GET vs POST: quando usar cada um
+1) GET
+O método GET serve para “pegar” dados do servidor.
+
+Os dados ficam na URL
+É ideal para consultas e filtros
+Fica visível no navegador e no histórico
+Tem limite de tamanho e não deve ser usado para dados sensíveis
+Exemplo
+Buscar um produto:
+
+
+Quando o usuário digita “camiseta”, a URL pode ficar assim:
+
+
+Situações em que usa GET
+Buscar dados
+Filtrar listagem
+Pesquisar no site
+Link com parâmetros
+Exemplo: /produtos?id=10
+GET é bom para leitura, não para envio de informações importantes como senha, cartão ou dados pessoais.
+
+2) POST
+O método POST serve para “enviar” dados ao servidor.
+
+Os dados ficam no corpo da requisição
+Não aparecem na URL
+É usado para criar ou alterar dados
+Mais seguro para informações sensíveis
+Exemplo
+Cadastro de usuário:
+
+
+Nesse caso, o navegador envia os dados no corpo da requisição, e não na URL.
+
+Situações em que usa POST:
+
+Login
+Cadastro de usuário
+Envio de formulário com senha
+Criação de pedidos
+Upload de arquivos
+Qualquer ação que altera dados no servidor
+Regra prática
+Use GET quando:
+Você está procurando algo
+Quer mostrar resultados em URL
+A ação não muda o estado do sistema
+Exemplo:
+buscar produto
+filtrar lista
+pesquisar
+Use POST quando:
+Você está enviando dados para criar/alterar algo
+Há dados sensíveis
+A ação muda algo no servidor
+Exemplo:
+login
+cadastro
+compra
+formulário de contato com mensagem
+Exemplo comparativo
+Buscar artigo
+
+Enviar comentário no artigo
+
+Dica importante
+O GET é mais adequado para “consulta”, e o POST é mais adequado para “envio de ação”.
+
+Se quiser, posso te mostrar também:
+
+a diferença na prática em HTML
+como isso funciona no PHP/Node
+exemplos de formulário com GET e POST no seu código atual do projeto.-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulario</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+
+        <p>
+            <label for="icor">Cor: </label>
+            <input type="color" name="cor" id="icor" value="#00ff00">
+        </p>
+
+        <p>
+            <label for="inivel">Nivel de Satisfação</label>
+            <input type="range" name=nivel" id="inivel" min="1" max="5"
+            value="2">
+        </p>
+
+        <p>
+            <label for="ifoto">Foto do perfil:</label>
+            <input type="file" name="foto" id="ifoto">
+        </p>
+
+        <p>
+            <input type="submit" valeu="enviar">
+            <input type="reset" valeu="limpar">
+        </p>
+    </form>
+</body>
+</html>
