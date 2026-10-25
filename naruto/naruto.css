@@ -1,0 +1,68 @@
+.container {
+    gap: 10px;
+    display: flex;
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 470px;
+    top: 250px;
+    height: 370px;
+    box-sizing: border-box;
+    padding: 4px;
+    background-color: #6a6a6d75;
+    border: 2px solid #00000073;
+    border-radius: 10px;
+    
+
+    
+}
+
+.titulo {
+     text-align: center;
+}
+
+body {
+
+    background-image: url("Doge\ Wallpaper\ 1920x1080\ High\ Quality\ Desktop\,\ iphone\ and\ android\ -\ Background\ and\ Wallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+
+.item01 {
+    
+    height: 360px;
+    
+    
+}
+
+.item {
+    background-color: #c7c2b0;
+    border: 1px solid #000;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.item:hover {
+    background-color: #ff9900;
+    cursor: pointer;
+}
+
+.video-youtube {
+    position: fixed;
+    top: 270px;
+    bottom: 0;
+    right: 750px;
+    width: 560px;
+    height: 315px;
+    box-shadow: 5px 5px 10px #0000007e;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
